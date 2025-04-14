@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div class="profile-container">
+      <img src="profile.JPG" alt="Profile Photo" />
+    </div>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('experience')">Experience</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </div>
+
+  <div class="content">
+    <!-- About -->
+    <div id="about" class="section active">
+      <h1>Hi, I'm <span class="highlight">Neha Karnati</span>.</h1><br>
+      <p>I am a Computer Science in Artificial Intelligence and Machine Learning Graduate from Nalla Malla Reddy Engineering College. I have worked on technologies like Python, HTML5, CSS, and Java during my bachelor's.
+        I have 6 months research experience at Indian Institute of Technology Hyderabad.
+        Currently, I am working at Accenture as Packaged App Development Associate.
+      </p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/neha-karnati" target="_blank"><img src="logo_linkedin.jpg" alt="LinkedIn" /></a>
+        <a href="https://github.com/nehakarnati" target="_blank"><img src="logo_git.jpg" alt="GitHub" /></a>
+        <a href="mailto:radharaninehakarnati@gmail.com"><img src="logo_gmail.jpg" alt="Email" /></a>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div id="experience" class="section">
+      <h2>Experience</h2><br>
+      <div>
+        <h3>Research Intern - IIT Hyderabad</h3><br>
+        <p><i>Jan 2024 to Jun 2024</i></p>
+        <p>Conducted research on Intelligent Transportation Systems in Cellular Vehicle to Everything Communication.<br>
+          Worked on creating maps using visualization tools like SUMO and Python.</p>
+      </div><br>
+      <div>
+        <h3>Data Science Intern - Innomatics Research Labs</h3><br>
+        <p><i>Sep 2024 to Oct 2024</i></p>
+        <p>Gained hands-on experience in Exploratory Data Analysis (EDA) using Pandas, Matplotlib, Seaborn, and Plotly Express.<br>
+          Performed EDA on AMCAT test data and Electric Vehicle Data.</p>
+      </div><br>
+      <div>
+        <h3>Packaged App Development Associate - Accenture</h3><br>
+        <p><i>Oct 2024-Present</i></p>
+        <p>Currently working at Accenture (not assigned to any project yet).<br>
+          Trained for 2.5 months in Java.</p>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="section">
+      <h2>Projects</h2><br>
+      <div class="projects">
+        <div class="project">
+          <img src="project1.jpg" alt="Project 1">
+          <p>AMCAT Data Analysis</p>
+          <div class="description">
+            <p>Performed EDA on AMCAT data using numpy, pandas, seaborn, and matplotlib</p>
+            <a href="https://github.com/nehakarnati/DataScience_Internship.git" target="_blank">
+              <img src="logo_git.jpg" alt="GitHub" class="github-icon" />
+            </a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="project2.png" alt="Project 2">
+          <p>Electric Vehicle Data Analysis</p>
+          <div class="description">
+            <p>Analysis and visualization of electric vehicle (EV) sales trends across the United States using numpy, pandas, sklearn and plotly</p>
+            <a href="https://github.com/nehakarnati/Electric_Vehicle-Analysis.git" target="_blank">
+              <img src="logo_git.jpg" alt="GitHub" class="github-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="section">
+      <h2>Skills</h2><br>
+      <ul>
+        <li>Languages: Python, Java, C, C++, HTML/CSS</li><br>
+        <li>Databases: MySQL</li><br>
+        <li>Libraries: NumPy, Pandas, OpenCV</li><br>
+        <li>Tools & Technologies: Git, MS Excel, Power BI</li><br>
+      </ul>
+    </div>
+
+    <!-- Education -->
+    <div id="education" class="section">
+      <h2>Education</h2><br>
+      <p>Bachelor of Technology in Computer Science - Artificial Intelligence & Machine Learning,</p><br>
+      <p>Nalla Malla Reddy Engineering College - 2020 to 2024</p>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="section">
+      <h2>Contact</h2><br>
+      <p>Email: <a href="mailto:radharaninehakarnati@gmail.com" style="color: #fff; text-decoration: underline;">radharaninehakarnati@gmail.com</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
