@@ -105,14 +105,16 @@
     background-color: #f4f4f4;
     color: #333;
   }
+  
   .project.active .description {
     display: block;
   }
+    
   .github-icon {
-    width: 12px;
-    height: 12px;
-    vertical-align: middle;
-    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: inline-block;
   }
   .highlight {
     background-color: #00796b;
@@ -129,4 +131,76 @@
       transform: translateY(0);
     }
   }
+/* Make the entire content scrollable */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #5a8d8f;
+  color: white;
+  position: relative;
+  overflow-y: auto;   /* enable vertical scroll */
+  height: 100vh;      /* full height for scroll */
+}
+
+/* Stack projects vertically */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Each project in a square box */
+.project {
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 400px;    /* optional: limit max width */
+  aspect-ratio: 1 / 1; /* square shape */
+  margin: 0 auto;      /* center horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Image should fill top of square */
+.project img {
+  width: 100%;
+  height: auto;
+  max-height: 60%; /* Adjust to keep room for text */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Title text */
+.project > p {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Description hidden by default */
+.description {
+  display: none;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Show description when active */
+.project.active .description {
+  display: block;
+}
+
+/* Hide GitHub icon inside the description */
+.project .github-icon {
+  display: none;
+}
+
   
