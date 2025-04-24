@@ -6,13 +6,23 @@ function showSection(id) {
   }
   
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.project').forEach(project => {
-      project.addEventListener('click', function () {
-        // Close all others
-        document.querySelectorAll('.project').forEach(p => {
-          if (p !== this) p.classList.remove('active');
+    const projects = document.querySelectorAll('.project');
+  
+    projects.forEach(project => {
+      project.addEventListener('click', function (event) {
+        // Prevent toggling when clicking on a link or image inside the description
+        if (event.target.tagName === 'A' || event.target.tagName === 'IMG') {
+          return;
+        }
+  
+        // Close all other projects
+        projects.forEach(p => {
+          if (p !== this) {
+            p.classList.remove('active');
+          }
         });
-        // Toggle current
+  
+        // Toggle the clicked project
         this.classList.toggle('active');
       });
     });
